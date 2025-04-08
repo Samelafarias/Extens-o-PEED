@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- código da fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+     <!-- fim código da fonte -->
+    <title>Fila</title>
+    <link rel="stylesheet" href="pilha.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="lista.html">Lista</a></li>
+                <li><a href="fila.html">Fila</a></li>
+                <li><a href="pilha.html">Pilha</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Pilha de Livros 📚</h1>
+    
+    <input type="text" id="tituloLivro" placeholder="Digite o título do livro">
+    <button onclick="adicionarLivro()">Adicionar Livro</button>
+    <button onclick="removerLivro()">Remover Livro</button>
+
+    <div id="pilhaContainer">
+        <p class="vazio">A pilha está vazia!</p>
+    </div>
+    </main>
+    
+
+    <footer>
+        © Programação Estruturada e Estrutura de Dados
+    </footer>
+    
+
+    <script src="pilha.js"></script>
+</body>
+</html>

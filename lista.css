@@ -1,5 +1,7 @@
+/* Estilo ajustado para garantir que as setas fiquem visíveis e corretamente posicionadas entre os números */
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Montserrat", sans-serif;
     background-color: #f4f7fa;
     margin: 0;
     padding: 0;
@@ -15,16 +17,14 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    text-align: center;
     z-index: 100;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     justify-content: center;
+    padding: 0;
 }
 
 nav ul li {
@@ -34,7 +34,13 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
 main {
@@ -42,83 +48,90 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 80px;
 }
 
 .container {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
 }
 
+h1 {
+    font-size: 35px;
+    color: #1d71b6;
+    margin-top: 20px;
+}
+
 button {
-    margin: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
+    margin: 5px;
+    padding: 12px 25px;
+    font-size: 18px;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     background-color: #1d71b6;
     color: white;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 button:hover {
     background-color: #16578b;
+    transform: scale(1.1);
 }
 
 .lista-container {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex-wrap: nowrap;
     margin-top: 20px;
 }
 
-.lista {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    flex-wrap: nowrap;
-}
-
-.no {
-    background-color: #1d71b6;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: bold;
+.lista-item {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 50px;
+    background: #2ecc71;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 20px;
+    border-radius: 20px;
+    margin: 5px;
+    min-width: 60px;
+    text-align: center;
     position: relative;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-.no::after {
-    content: "→";
-    font-size: 20px;
+.seta {
+    font-size: 24px;
+    font-weight: bold;
     color: black;
-    position: absolute;
-    right: -20px;
+    margin: 0 10px;
+    display: inline-block;
 }
 
-.no:last-child::after {
-    content: "";
+.lista-container .lista-item:not(:last-child)::after {
+    content: '\2192'; /* Código da seta → */
+    font-size: 24px;
+    color: black;
+    margin-left: 10px;
 }
 
 footer {
     width: 100%;
-    height: 5vh;
     background-color: #1d71b6;
     color: white;
     text-align: center;
-    padding: 15px 0;
+    padding: 10px 0;
     position: fixed;
     bottom: 0;
     left: 0;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
 }

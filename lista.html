@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista Encadeada</title>
     <link rel="stylesheet" href="lista.css">
+    <title>Lista Encadeada</title>
 </head>
 <body>
+
     <header>
         <nav>
             <ul>
@@ -16,23 +17,22 @@
             </ul>
         </nav>
     </header>
-    
+
     <main>
         <div class="container">
             <h1>Lista Encadeada</h1>
-            <button onclick="adicionar()">Adicionar Nó</button>
-            <button onclick="remover()">Remover Nó</button>
-            <div id="lista-container" class="lista-container">
-                <p id="mensagem" class="mensagem-vazia">A lista está vazia!</p>
-                <div id="lista" class="lista"></div>
-            </div>
+            <input type="number" id="valorInput" placeholder="Digite um número">
+            <button onclick="adicionar()">Adicionar</button>
+            <button onclick="remover()">Remover</button>
+            <div class="lista-container" id="lista"></div>
+            <div id="mensagem" class="mensagem-vazia"></div>
         </div>
     </main>
-    
+
     <footer>
         © Programação Estruturada e Estrutura de Dados
     </footer>
-    
+
     <script src="lista.js"></script>
 </body>
 </html>
